@@ -1,5 +1,7 @@
 import React from 'react';
 import './sign-in.styles.scss';
+import FormInput from '../form-input/form-input.component';
+import CustomButton from '../custom-button/custom-button.component';
 
 
 class SignIn extends React.Component {
@@ -7,35 +9,49 @@ class SignIn extends React.Component {
     super(props);
 
     this.state = {
-      email:'',
-      password:''
+      email: '',
+      password: ''
     }
   }
 
-  handleChange = event =>{
-    const {value, name} = event.target;
+  handleChange = event => {
+    const { value, name } = event.target;
 
-    this.setState({[name]:value})
+    this.setState({ [name]: value })
   }
 
-  handleSubmit = event =>{
+  handleSubmit = event => {
     event.preventDefault();
 
-    this.setState({email: '', password: ''})
+    this.setState({ email: '', password: '' })
   }
-  render(){
-    return(
-      <div className='sing-in'>
-        <h2>I already have an account</h2>
+  render() {
+    return (
+      <div className='sign-in'>
+        <h2 className='title'>I already have an account</h2>
         <span>Sign in with your email and password</span>
 
         <form onSubmit={this.handleSubmit}>
-          <input name="email" type="email" onChange={this.handleChange} value={this.state.email} required/>
-          <lable>Email</lable>
-          <input name="password" onChange={this.handleChange} type="password" value={this.state.password} required/>
-          <lable>Password</lable>
+          <FormInput
+            name="email" 
+            type="email" 
+            handleChange={this.handleChange} 
+            value={this.state.email}
+            label='Email' 
+            required 
+          />
+          
+          <FormInput 
+            name="password" 
+            handleChange={this.handleChange} 
+            type="password" 
+            value={this.state.password} 
+            label='password'
+            required 
+          />
+          
 
-          <input type="submit" value='Submit form'/>
+          <CustomButton type='submit'>SIGN IN</CustomButton>
         </form>
       </div>
     )
