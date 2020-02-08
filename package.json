@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.8.4",
     "firebase": "^7.7.0",
     "hoist-react-statics": "^1.0.2",
     "node-sass": "^4.13.1",
@@ -15,7 +16,9 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "stripe-checkout": "^1.0.9",
+    "styled-components": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
