@@ -6,7 +6,7 @@
     "@babel/runtime": "^7.8.4",
     "firebase": "^7.7.0",
     "hoist-react-statics": "^1.0.2",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
